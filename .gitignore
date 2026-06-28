@@ -1,0 +1,37 @@
+# --- Credenciales / entorno ---
+.env
+.env.*
+!.env.example
+*.key
+
+# --- Datos del corpus (se liberan por separado; NO van al repo de código) ---
+data/
+corpus_grande/
+**/textos/
+**/textos_limpios_final/
+**/seleccionados/
+**/textos_aprobados/
+**/set_validacion/
+# textos crudos/limpios del corpus
+*.txt
+# excepción: requirements.txt SÍ es código de apoyo y debe versionarse
+!requirements.txt
+# candidatos, reportes, qc, usage_log…
+*.csv
+# preanot_*.json (anotaciones de Label Studio)
+*.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- Sistema operativo / editores ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

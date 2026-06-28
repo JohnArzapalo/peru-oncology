@@ -1,0 +1,15 @@
+# Pipeline corpus clínico oncológico peruano — dependencias de terceros.
+# Python >= 3.9. La biblioteca estándar (csv, os, re, json, argparse, random,
+# shutil, unicodedata, glob, collections…) NO se lista aquí.
+#
+# Las versiones son mínimos sugeridos. Para fijar tu entorno exacto:
+#     pip freeze > requirements.lock.txt
+
+# --- Etapa 1 (01_harvest_scielo): recolección desde SciELO ---
+articlemetaapi>=1.26     # cliente ArticleMeta; provee `articlemeta.client.RestfulClient`
+trafilatura>=1.6         # extracción del texto principal del HTML
+beautifulsoup4>=4.12     # parseo HTML (respaldo)
+lxml>=4.9                # backend de parseo para trafilatura/bs4
+
+# --- Etapas 1, 4, 6, 8: llamadas HTTP (SciELO y API de DeepSeek) ---
+requests>=2.31
